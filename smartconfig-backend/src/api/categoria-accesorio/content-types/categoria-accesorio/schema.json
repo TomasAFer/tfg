@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_accesorios",
+  "info": {
+    "singularName": "categoria-accesorio",
+    "pluralName": "categoria-accesorios",
+    "displayName": "CategoriaAccesorio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "nombre": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "accesorios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accesorio.accesorio",
+      "mappedBy": "categoria_accesorios"
+    }
+  }
+}

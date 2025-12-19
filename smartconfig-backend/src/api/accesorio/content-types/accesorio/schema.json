@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accesorios",
+  "info": {
+    "singularName": "accesorio",
+    "pluralName": "accesorios",
+    "displayName": "Accesorio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "nombre_corto": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "precio_lista": {
+      "type": "decimal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "imagen": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "descripcion": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "categoria_accesorios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-accesorio.categoria-accesorio",
+      "inversedBy": "accesorios"
+    },
+    "ficha_tecnica_pdf": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

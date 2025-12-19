@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "robot_accesorios",
+  "info": {
+    "singularName": "robot-accesorio",
+    "pluralName": "robot-accesorios",
+    "displayName": "RobotAccesorio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "accesorio_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::accesorio.accesorio"
+    },
+    "obligatorio": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "min_cantidad": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "max_cantidad": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "notas": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "robot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::robot.robot"
+    }
+  }
+}

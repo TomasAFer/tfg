@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accesorio_exclusions",
+  "info": {
+    "singularName": "accesorio-exclusion",
+    "pluralName": "accesorio-exclusions",
+    "displayName": "AccesorioExclusion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "motivo": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "accesorio_a_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::accesorio.accesorio"
+    },
+    "accesorio_b_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::accesorio.accesorio"
+    }
+  }
+}

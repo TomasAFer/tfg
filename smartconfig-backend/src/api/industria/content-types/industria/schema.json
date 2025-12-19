@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industrias",
+  "info": {
+    "singularName": "industria",
+    "pluralName": "industrias",
+    "displayName": "Industria",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "robots": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::robot.robot",
+      "mappedBy": "industrias"
+    },
+    "imagen": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

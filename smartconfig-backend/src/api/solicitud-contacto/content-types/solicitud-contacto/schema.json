@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solicitudes_contacto",
+  "info": {
+    "singularName": "solicitud-contacto",
+    "pluralName": "solicitudes-contacto",
+    "displayName": "SolicitudContacto",
+    "description": "Solicitudes de contacto de clientes con configuraciones"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "empresa": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "comentario": {
+      "type": "text"
+    },
+    "configuracion_robots": {
+      "type": "json"
+    },
+    "precio_total": {
+      "type": "decimal"
+    },
+    "estado": {
+      "type": "enumeration",
+      "default": "pendiente",
+      "enum": [
+        "pendiente",
+        "contactado",
+        "cerrado"
+      ]
+    }
+  }
+}
