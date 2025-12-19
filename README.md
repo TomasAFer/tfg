@@ -2,8 +2,8 @@
 
 Solución completa para el configurador de robots industriales **SmartConfig**. El repositorio contiene:
 
-- **smartconfig-backend**: backend en **Strapi v5** que expone el catálogo y las relaciones de compatibilidad.
-- **smartconfig-frontend**: frontend en **React + TypeScript + Vite** que consume la API de Strapi.
+- **smartconfig-backend**: https://tfg-96ol.onrender.com/ backend en **Strapi v5** que expone el catálogo y las relaciones de compatibilidad.
+- **smartconfig-frontend**: https://tfg-tan.vercel.app/ frontend en **React + TypeScript + Vite** que consume la API de Strapi.
 
 ## Requisitos
 
